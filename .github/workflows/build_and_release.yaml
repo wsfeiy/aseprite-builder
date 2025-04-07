@@ -20,12 +20,11 @@ jobs:
     steps:
       - name: Fetch Aseprite release link
         id: aseprite-link
-        uses: a1393323447/fetch-release@main
+        uses: aseprite/aseprite@main
         with:
             group: aseprite
             repo: aseprite
-            version: v1.3.13
-            match: Aseprite-v1\.3\.13-Source\.zip
+            match: Aseprite-.*?-Source.zip
 
   create-release:
     name: Create Release
